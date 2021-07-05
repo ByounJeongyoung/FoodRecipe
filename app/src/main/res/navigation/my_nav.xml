@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/fragment_recipes">
+
+    <fragment
+        android:id="@+id/fragment_food_joke"
+        android:name="com.jeongyoung.foodrecipe.fragment_food_joke"
+        android:label="Food Joke"
+        tools:layout="@layout/fragment_food_joke" />
+    <fragment
+        android:id="@+id/fragment_recipes"
+        android:name="com.jeongyoung.foodrecipe.fragment_recipes"
+        android:label="Recipes"
+        tools:layout="@layout/fragment_recipes" >
+        <action
+            android:id="@+id/action_fragment_recipes_to_fragment_favorite_recipes"
+            app:destination="@id/fragment_favorite_recipes" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_favorite_recipes"
+        android:name="com.jeongyoung.foodrecipe.fragment_favorite_recipes"
+        android:label="Favorites"
+        tools:layout="@layout/fragment_favorite_recipes" >
+        <action
+            android:id="@+id/action_fragment_favorite_recipes_to_fragment_food_joke"
+            app:destination="@id/fragment_food_joke" />
+    </fragment>
+</navigation>
