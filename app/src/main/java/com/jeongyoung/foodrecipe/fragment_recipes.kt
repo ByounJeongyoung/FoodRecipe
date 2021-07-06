@@ -21,6 +21,7 @@ class fragment_recipes : Fragment() {
 
         binding = FragmentRecipesBinding.inflate(inflater, container,false)
 
+        binding.recyclerView.showShimmer()
 
 
         return binding.root
